@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" media="all" href="vendor/terminal.min.css">
+    </head>
+    <body>
+        <div id="terminal"></div>
+        <script src="vendor/terminal.min.js"></script>
+        <script>
+         // More documentation at https://github.com/SDA/terminal
+         var terminal = new Terminal('terminal', {}, {
+             execute: function(cmd, args) {
+                 return "Command: " + cmd + ", Args: " + args.join(', ');
+             }
+         });
+        </script>
+    </body>
+</html>
